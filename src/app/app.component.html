@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<app-battlefield *ngIf="map" [cells]="map.cells" [grid]="map.grid"></app-battlefield>
+
+<input type="number" [formControl]="gridControl" />
+<button (click)="newGame()">Regen Map</button>
+<button (click)="clearGame()">Clear Map</button>
+<button *ngIf="map" (click)="saveGame()">Save Game</button>
+<button (click)="reloadMap()">Reload</button>
+<app-dev-tools class="dev-tools" />

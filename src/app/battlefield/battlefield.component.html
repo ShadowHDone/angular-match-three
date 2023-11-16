@@ -1,0 +1,25 @@
+Selected: {{ selected && 'x:' + selected.x + ' y:' + selected.y }}
+<div
+  class="wrapper"
+  [style.grid-template-columns]="'repeat(' + grid + ', 1fr)'"
+>
+  <div
+    *ngFor="let cell of cells"
+    class="cell"
+    [class.cell__vertical]="cell.pos.y === selected?.y"
+    [class.cell__horizontal]="cell.pos.x === selected?.x"
+    [class.cell--smooth]="cell.offset"
+    [style.transform]="cell.offset && moveCell(cell)"
+    (click)="click(cell.pos)"
+  >
+    <div
+      class="boll"
+      [class.boll__selected]="cell.pos == selected"
+      [style.background-color]="cell.color"
+    >
+      {{ cell.pos && 'x:' + cell.pos.x + ' y:' + cell.pos.y }}
+      <br />
+      {{ cell.offset && 'x:' + cell.offset.x + ' y:' + cell.offset.y }}
+    </div>
+  </div>
+</div>

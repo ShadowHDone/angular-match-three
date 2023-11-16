@@ -1,0 +1,7 @@
+<div class="header">
+  <h3>DevTools</h3>
+  <button class="button" (click)="open = !open">{{ open ? '🗕' : '🗖' }}</button>
+</div>
+<div *ngIf="open">
+  <app-settings></app-settings>
+</div>

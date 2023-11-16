@@ -1,0 +1,9 @@
+<form [formGroup]="settingsForm">
+  <h3>Settings</h3>
+  <input
+    [formControl]="settingsForm.controls.autosave"
+    type="checkbox"
+    id="autosave"
+  />
+  <label for="autosave">Autosave</label>
+</form>

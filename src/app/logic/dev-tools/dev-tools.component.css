@@ -1,0 +1,17 @@
+:host {
+  color: #ffffff;
+  padding: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.button {
+  border: none;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 5px;
+}
